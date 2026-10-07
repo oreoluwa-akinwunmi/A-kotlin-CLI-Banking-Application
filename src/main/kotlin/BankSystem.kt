@@ -3,7 +3,7 @@ import kotlin.random.Random
 
 // -------------------- BANK SYSTEM --------------------
 class BankSystem {
-    private val accounts = mutableListOf<BankAccount>()
+    private val accounts = mutableSetOf<BankAccount>()
 
     private val usedAccountNumbers = mutableSetOf<String>()
 

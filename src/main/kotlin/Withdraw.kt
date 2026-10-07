@@ -6,7 +6,7 @@ class Withdraw(account: BankAccount) : AccountService(account), Transaction {
             println(TransactionResult.Error("Insufficient balance"))
         } else {
             account.balance -= amount
-            println(TransactionResult.Success("Withdrawn ₦$amount. Remaining balance: ${account.balance}"))
+            println(TransactionResult.Success("Withdrawn ${formatMoney(amount)}. Remaining balance: ${formatMoney(account.balance)}"))
         }
     }
 }

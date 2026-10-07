@@ -21,8 +21,9 @@ fun makeDeposit() {
         println("Bank: $selectedBank")
         println(TransactionResult.Error("Account not found."))
     } else {
-        print("Enter amount to withdraw: ")
-        val amount = readlnOrNull()?.toDoubleOrNull() ?: 0.0
-        Withdraw(account).execute(amount)
+        println("Minimum deposit amount is ${formatMoney(100.00)}")
+        print("Enter amount to deposit: ")
+        val amount = readlnOrNull()?.toDoubleOrNull() ?: 0.00
+        Deposit(account).execute(amount)
     }
 }

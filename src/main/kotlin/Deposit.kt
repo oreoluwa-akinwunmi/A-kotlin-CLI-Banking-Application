@@ -4,7 +4,7 @@ class Deposit(account: BankAccount) : AccountService(account), Transaction {
             println(TransactionResult.Error("Invalid deposit amount"))
         } else {
             account.balance += amount
-            println(TransactionResult.Success("Deposited $amount. New balance: ${account.balance}"))
+            println(TransactionResult.Success("Deposited ${formatMoney(amount)}. New balance: ${formatMoney(account.balance)}"))
         }
     }
 }
